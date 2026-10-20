@@ -1,55 +1,70 @@
 # Zepto SQL Data Analysis Project
 
 ## Project Overview
-This project explores Zepto product data using SQL to analyze product pricing, discounts, stock availability, and inventory across categories. The dataset was sourced from Kaggle.
+In this I worked with an original Zepto product dataset sourced from Kaggle. I used SQL and PostgreSQL to explore the data and understand product pricing, discounts, stock availability, and inventory across different categories.
 
-## Objectives
-- Explore the product dataset and understand its structure.
-- Identify missing values, zero-priced products, and repeated product names.
-- Analyze product discounts and pricing patterns.
-- Compare in-stock and out-of-stock products.
-- Estimate inventory value and analyze product weights across categories.
+Through this project, I got practical experience working with a real-world dataset and using SQL to answer different business-related questions.
 
-## Tools and Technologies
+## Project Objectives
+- Explore the dataset and understand its structure.
+- Check for missing values and identify products with zero prices.
+- Find product names that appear multiple times.
+- Analyze product prices and discount percentages.
+- Compare products that are in stock and out of stock.
+- Calculate estimated inventory value for different categories.
+- Analyze product weight and price per gram.
+
+## Tools Used
 - SQL
 - PostgreSQL
-- Kaggle dataset
+- Kaggle (for the dataset)
 
-## SQL Analysis Performed
+## Work Done in SQL
 
 ### 1. Data Exploration
-- Counted records and inspected sample data.
-- Checked for missing values.
-- Identified product categories.
-- Compared stock availability.
-- Found product names associated with multiple SKUs.
+I started by exploring the dataset to understand the available information. I checked the total number of records, viewed sample data, searched for missing values, identified product categories, and compared in-stock and out-of-stock products.
+
+I also checked which product names appeared multiple times in the dataset.
 
 ### 2. Data Cleaning
-- Identified products with zero MRP or selling price.
-- Removed records with zero MRP.
-- Converted price values from paise to rupees, assuming the original dataset uses paise.
+In this step, I checked for products with zero MRP or selling price. I removed records with zero MRP and converted the price values from paise to rupees, assuming the original dataset stored prices in paise.
 
 ### 3. Business Questions
-1. What are the top 10 products by discount percentage?
-2. Which high-MRP products are out of stock?
-3. What is the estimated inventory value by category?
-4. Which products have an MRP above ₹500 and a discount below 10%?
-5. Which five categories have the highest average discount?
-6. Which products offer the lowest price per gram?
-7. How can products be grouped by weight into Low, Medium, and Bulk categories?
-8. What is the total inventory weight by category?
+I used SQL to answer the following questions:
 
-## Skills Demonstrated
-SQL querying, filtering, aggregation, sorting, data cleaning, `GROUP BY`, `HAVING`, `CASE` statements, `DISTINCT`, and aggregate functions.
+1. What are the top 10 products with the highest discount percentages?
+2. Which products have a high MRP but are out of stock?
+3. What is the estimated inventory value for each category?
+4. Which products have an MRP greater than ₹500 and a discount below 10%?
+5. Which five categories have the highest average discounts?
+6. Which products offer the best price per gram for products weighing at least 100 grams?
+7. How can products be grouped into Low, Medium, and Bulk categories based on weight?
+8. What is the total inventory weight for each category?
+
+## SQL Skills Practiced
+While working on this project, I practiced the following SQL concepts:
+
+- SELECT and DISTINCT
+- WHERE and ORDER BY
+- GROUP BY and HAVING
+- Aggregate functions such as COUNT, SUM, and AVG
+- CASE statements
+- Data cleaning and updating records
+- Filtering and analyzing product data
 
 ## Dataset
-The dataset was sourced from Kaggle. Add the original dataset URL here: [Insert Kaggle dataset link]
+The dataset used in this project was downloaded from Kaggle.
 
-## How to Run
+**Dataset link:** [Add the original Kaggle dataset URL here]
+
+## How to Run the Project
 1. Download the dataset from the original Kaggle source.
-2. Create the `zepto` table using the SQL script.
-3. Import the data into PostgreSQL.
-4. Execute the exploration, cleaning, and analysis queries in the intended order.
+2. Create the `zepto` table using the provided SQL script.
+3. Import the dataset into PostgreSQL.
+4. Run the SQL queries to explore, clean, and analyze the data in the intended order.
 
-## Disclaimer
-The inventory value calculated in this project is an estimate based on discounted selling price and available quantity. It should not be interpreted as actual sales revenue.
+## What I Learned
+This project helped me improve my SQL skills and understand how SQL can be used to explore data and answer business-related questions. I also learned the importance of checking data quality before performing analysis.
+
+## Note
+The inventory value calculated in this project is an estimate based on discounted selling price and available quantity. It does not represent actual sales revenue.
